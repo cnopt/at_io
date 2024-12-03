@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "main": "backend/index.js",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@tanstack/react-query": "^5.60.5",
     "@tanstack/react-query-devtools": "^5.60.5",
