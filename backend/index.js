@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
 const _ = require('lodash');
+const path = require('path');
 
 const app = express();
 app.use(cors());
@@ -10,6 +11,12 @@ const port = 1337;
 
 const ioCookie = "XSRF-TOKEN=eyJpdiI6InZFUklBYUVLdkkzYUFIb2NFSHdGUEE9PSIsInZhbHVlIjoiQUEreGJiaC81TzZ2QmRmeDZCTFBFTHh4cjZXMWl3VVhqb1MzMGRZejZMY3JYTUNLck1Pdy85TWQ5SS9mRUQ5cDVHYlZncDFtd3l0L1ROMHhLZW4zWm9xSzZwRWZZT2hHUFNnU3Q1c044VThSTmw1eVI1NnNzVzZZRzErb2hQakMiLCJtYWMiOiI0ZTVhYThmMmZiZmRjOWFkZDIyOGVjODNjM2UyMjQ5ZGIxMWQ0YmU1YTA4MGI4YmE2MTA3NDgyMjFjN2Q3MTJhIiwidGFnIjoiIn0%3D; alphatrust_io_session=eyJpdiI6ImZIQnhqMkREbnE0ZUVaa3NQbnlvSXc9PSIsInZhbHVlIjoidVNjYXpyL0RnbndQYlZiWnBPQ2NGR2tDRFJ3S28xUDFxYkNMSmpMS2Q3L2tNU0diSFNwREcxVWF2OGJUdEtMNFJUdmdPK3A5ckFQUFljbDl2TllmalpHQVVBTnhJUDJtMUYvdjVLN25qQ2hPOHcwc2JwYm41VEpTWDFFblkxWHUiLCJtYWMiOiI5NWEwYzhkOGExMjNiNWY0ZGU1MGM5ZjExMmQ5ZjE1MTFmNTYxZjA1NGMxMTIyODM1NDNjNTk0ZDk0NGJlNDI4IiwidGFnIjoiIn0%3D"
 
+
+// Define a route to serve the HTML file
+app.get('/', (req, res) => {
+    // Send the HTML file as the response
+    res.sendFile(path.join(__dirname, 'frontend/index.html'));
+});
 
 app.get('/search/:searchTerm', (req, res) => {
     let searchTerm = req.params.searchTerm;
