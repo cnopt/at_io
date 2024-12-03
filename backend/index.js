@@ -15,7 +15,7 @@ const ioCookie = "XSRF-TOKEN=eyJpdiI6InpVYVc1ZmVsazR1TU9sZDJMY1l1b3c9PSIsInZhbHV
 // Define a route to serve the HTML file
 app.get('/', (req, res) => {
     // Send the HTML file as the response
-    res.sendFile(path.join(__dirname, '../frontend/index.html'));
+    res.sendFile(path.join(__dirname, '../frontend/public/index.html'));
 });
 
 app.get('/search/:searchTerm', (req, res) => {
