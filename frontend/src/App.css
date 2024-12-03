@@ -1,0 +1,316 @@
+@font-face {
+    font-family: mono;
+    src: url('./mono.ttf');
+}
+@font-face {
+    font-family: mono-italic;
+    src: url('./mono-italic.ttf');
+}
+@font-face {
+    font-family: sf;
+    src: url('./sf-regular.otf');
+}
+
+.container {
+    text-align: center;
+}
+
+.logo {
+    margin-top: 7rem;
+    margin-left: -23rem;
+}
+
+.dropdown-container {
+    width: 30rem;
+    margin: auto;
+    margin-top: 1rem;
+    font-family: mono;
+}
+
+.customer-dropdown {
+    display: inline-block;
+    margin-right: 1rem;
+}
+.customer-dropdown select {
+    font-family: sf;
+    width: 11rem;
+    padding-left: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border-radius: 5px;
+}
+option {
+    background-color: white;
+    color:'#000'
+}
+select option {
+    color:#000;
+}
+select option:checked {
+    color:'#000'
+}
+select:has(option[value="crowe"]:checked) { 
+    background-color: rgb(242 254 224);
+    outline: none;
+    color: rgb(29 52 18);
+    transition: all 0.2s;
+}
+select:has(option[value="ascot-lloyd"]:checked) {
+    background-color: rgb(242 254 224);
+    outline: none;
+    color: rgb(29 52 18);
+    transition: all 0.2s;
+}
+.customer-dropdown label {
+    display: block;
+    text-align: left;
+    font-size: 0.8em;
+    font-family: sf;
+    opacity: 0.5; 
+}
+.customer-dropdown label span {
+    font-size: 1.8em;
+    vertical-align: middle;
+    font-family: mono;
+    /* color:rgb(3, 3, 90); */
+}
+
+
+.workflow-results-dropdown {
+    display: inline-block;
+}
+.workflow-results-dropdown select {
+    font-family: sf;
+    width: 16rem;
+    padding-left: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border-radius: 5px;
+}
+.workflow-results-dropdown label {
+    display: block;
+    text-align: left;
+    font-size: 1.4em;
+    font-family: mono-italic;
+    opacity: 0.5; 
+}
+.workflow-results-dropdown label span {
+    font-size: 1.1em;
+    vertical-align: bottom;
+    margin-right: 0.25rem;
+    /* color:rgb(3, 3, 90); */
+}
+
+.form-search {
+    width: 26rem;
+    margin: auto;
+    margin-top: 0.5rem;
+    position: relative;
+}
+.search-results-container {
+    position: absolute;
+    top: 1.5rem;
+    left: 0.47rem;
+    text-align: left;
+    background-color: white;
+    border: 1px solid;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    width: 19.75rem;
+    padding-left: 1rem;
+}
+.search-results-container p {
+    font-family: mono;
+    font-size: 0.75em;
+}
+.search-results-container p:hover {
+    cursor: pointer;
+    font-family: mono-italic;
+    font-weight: bold;
+}
+
+form {
+    margin-top: 1rem;
+    text-align: center;
+}
+.error {
+    text-align: center;
+    margin-top: 2rem;
+    color:red;
+    font-family: mono;
+    font-size: 0.85em;
+}
+.error-icon {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding-left: 0.35rem;
+    padding-top: 0.09rem;
+    padding-bottom: 0.1rem;
+    padding-right: 0.3rem;
+    margin-right: 0.3rem;
+}
+.error-message {
+    font-family: sf;
+}
+.error-option {
+    color:red
+}
+.loading {
+    font-family: mono;
+    font-size: 1.2em;
+    margin-top: 2.5rem;
+    text-align: center;
+}
+.search-loading {
+    font-family: mono;
+    position: absolute;
+    top:0.3rem;
+    right:-0.6rem;
+}
+input[type="text"] {
+    width: 20rem;
+    font-size: 0.9em;
+    padding: 0.25rem;
+    padding-left: 0.5rem;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border: none;
+    border: 1px solid black;
+    font-family: mono-italic;
+    background-color: transparent;
+}
+input[type="text"]:focus {
+    outline: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-text-fill-color: #000;
+    transition: background-color 5000s ease-in-out 0s;
+
+}
+button {
+    margin-top: 1rem;
+    font-size: 0.8em;
+    font-family: sf;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 28rem;
+    outline: none;
+    border: none;
+    background-color: #e1e1e1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+button:disabled {
+    background-color: #f4f4f4;
+    color:#d7d7d7;
+    outline: none;
+    border: none;
+}
+button:hover {
+    background-color: #dbdbdb;
+}
+
+.result-container {
+    font-family: mono;
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.8em;
+    margin-bottom: 5rem;
+}
+.response-divs {
+    width: 60%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.at-data-grid {
+    margin-right: 0.75rem;
+}
+
+.at-data-grid,
+.io-data-grid
+ {
+    width: 20rem;
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table tr th {
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid black;
+}
+
+.upload-documents-row td {
+    padding-top: 1rem;
+    position: relative;
+    opacity: 0.5;
+    font-family: mono-italic;
+}
+.upload-document-title td {
+    position: relative;
+    padding-left: 1rem;
+}
+.upload-document-title td::before {
+    content:"󱞩";
+    position: absolute;
+    left: 0;
+}
+.upload-document-title {
+    background-color: #eee;
+}
+.upload-document-guid {
+    background-color: #eee;
+}
+.upload-document-title:nth-of-type(4n-1) {
+    background-color: #fff;
+}
+.upload-document-guid:nth-of-type(4n) {
+    background-color: #fff;
+}
+.upload-document-guid td {
+    position: relative;
+    padding-left: 1rem;
+    padding-bottom: 0.25rem;
+}
+
+.test-outcome-badge-container {
+    width: 220px;
+    height: 91px;
+    display: inline-block;
+}
+.test-outcome-icon {
+    font-size: 1.25em;
+    vertical-align: middle;
+    padding-right: 0.3rem;
+    font-family: mono;
+}
+.test-outcome-fail {
+    padding:0;
+    margin: 0;
+    margin-top: 0.3rem;
+    font-size: 1em;
+    color:#ff7900;
+    font-family: sf;
+}
+.test-outcome-pass {
+    padding:0;
+    margin: 0;
+    margin-top: 0.3rem;
+    color:#83bf00;
+    font-size: 1em;
+    font-family: sf;
+}
+
+@media screen and (max-width:870px) {
+    
+}
